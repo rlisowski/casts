@@ -8,7 +8,6 @@ doc = Nokogiri::XML(open("http://feeds2.feedburner.com/sdrbpodcast"))
 doc.xpath("//item").each do |item|
   link = item.xpath("enclosure").first["url"]
   name = File.basename(link)
-  next if File.exists?(File.join(File.dirname(__FILE__), name))
 
   puts "---", name, link
 
