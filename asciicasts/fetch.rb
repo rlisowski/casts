@@ -28,7 +28,7 @@ doc.xpath("//item").each do |item|
 
   puts "---", name, link
 
-  kit = PDFKit.new(link, :proxy => "http://proxy.non.3dart.com:3128")
+  kit = PDFKit.new(link)
 
   # Save the PDF to a file
   file = kit.to_file(File.join(File.dirname(__FILE__), "#{name}.pdf"))
