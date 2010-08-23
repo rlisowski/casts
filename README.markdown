@@ -4,6 +4,7 @@ Use this scripts to download casts eg. railscasts, asciicast, sdrubypodcast etc.
 * http://railscasts.com/
 * http://asciicasts.com/
 * http://ruby5.envylabs.com/
+* http://5by5.tv/rubyshow (railsenvy podcast)
 * http://podcast.rubyonrails.org/
 * http://sdruby.org/
 
