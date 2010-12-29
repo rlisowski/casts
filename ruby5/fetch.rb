@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+require File.expand_path('../../boot', __FILE__)
 
 # http://feeds.feedburner.com/Ruby5
 
