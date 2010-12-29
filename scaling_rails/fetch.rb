@@ -1,8 +1,6 @@
-# http://feeds.feedburner.com/Scaling-Rails
+require File.expand_path('../../boot', __FILE__)
 
-require 'rubygems'
-require 'open-uri'
-require 'nokogiri'
+# http://feeds.feedburner.com/Scaling-Rails
 
 doc = Nokogiri::XML(open("http://feeds.feedburner.com/Scaling-Rails"))
 doc.xpath("//item").each do |item|

@@ -13,6 +13,7 @@ Requirements:
 --------------------
 0. wget	-	scripts use it to download files!
 1. rubygems	-	script are using gems
-2. open-uri	-	work with urls
-3. nokogiri	-	work with xml
-4. pdfkit	-	generate pdf from website (eg. asciicasts)
+2. bundler	-	yes i use it
+3. open-uri	-	work with urls
+4. nokogiri	-	work with xml
+5. pdfkit	-	generate pdf from website (eg. asciicasts)

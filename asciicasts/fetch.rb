@@ -1,3 +1,5 @@
+require File.expand_path('../../boot', __FILE__)
+
 # http://asciicasts.com/episodes.xml
 #<?xml version="1.0" encoding="UTF-8"?>
 #<rss version="2.0">
@@ -14,11 +16,6 @@
 #      <guid>http://asciicasts.com/episodes/219-active-model</guid>
 #      <link>http://asciicasts.com/episodes/219-active-model</link>
 #    </item>
-
-require 'rubygems'
-require 'open-uri'
-require 'nokogiri'
-require 'pdfkit'
 
 doc = Nokogiri::XML(open("http://asciicasts.com/episodes.xml"))
 doc.xpath("//item").each do |item|

@@ -1,8 +1,6 @@
-#http://feeds2.feedburner.com/sdrbpodcast
+require File.expand_path('../../boot', __FILE__)
 
-require 'rubygems'
-require 'open-uri'
-require 'nokogiri'
+#http://feeds2.feedburner.com/sdrbpodcast
 
 doc = Nokogiri::XML(open("http://feeds2.feedburner.com/sdrbpodcast"))
 doc.xpath("//item").each do |item|
