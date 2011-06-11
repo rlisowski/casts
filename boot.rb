@@ -15,5 +15,4 @@ end if File.exist?(gemfile)
 
 require 'nokogiri'
 require 'open-uri'
-require 'pdfkit'
 

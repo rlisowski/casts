@@ -3,3 +3,5 @@
 *.mp4
 *.mov
 *.pdf
+.bundle
+bundle

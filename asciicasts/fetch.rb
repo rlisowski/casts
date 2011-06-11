@@ -20,13 +20,12 @@ require File.expand_path('../../boot', __FILE__)
 doc = Nokogiri::XML(open("http://asciicasts.com/episodes.xml"))
 doc.xpath("//item").each do |item|
   link = item.xpath("link").first.text
-  name = File.basename(link)
-  next if File.exists?(File.join(File.dirname(__FILE__), "#{name}.pdf"))
+  page = Nokogiri::XML(open(link))
+  link = page.css("#otherFormats a").first[:href].gsub(/\?\d+$/, '')
+	name = File.basename(link)
 
   puts "---", name, link
 
-  kit = PDFKit.new(link)
+  `cd #{File.dirname(__FILE__)} && wget -c #{link}`
 
-  # Save the PDF to a file
-  file = kit.to_file(File.join(File.dirname(__FILE__), "#{name}.pdf"))
 end
